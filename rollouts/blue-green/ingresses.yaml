@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rollouts-ingress-active
+spec:
+  rules:
+    - host: active.ginger-ous.click
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: rollout-bluegreen-active
+                port:
+                  number: 8080
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rollouts-ingress-preview
+spec:
+  rules:
+    - host: preview.ginger-ous.click
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: rollout-bluegreen-preview
+                port:
+                  number: 8080
+
+

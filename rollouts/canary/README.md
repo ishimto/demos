@@ -16,14 +16,14 @@ This repository demonstrates a basic Argo Rollouts canary deployment on Kubernet
 
 1. Enable the NGINX ingress addon in Minikube and deploy resources:
    ```sh
-   ./run.sh
+   bash run.sh
    ```
 
 2. Access the application at [http://rollouts.ginger-ous.click](http://rollouts.ginger-ous.click)
 
 ## Accessing the Argo Rollouts Dashboard
 
-.Start the dashboard:
+3. Start the dashboard:
 ```sh
 kubectl argo rollouts dashboard
 ```

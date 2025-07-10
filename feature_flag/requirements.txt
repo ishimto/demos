@@ -1,0 +1,2 @@
+UnleashClient==6.3.0
+Flask==3.1.1
